@@ -1,0 +1,60 @@
+QTreeWidget
+{  
+    	background-color:transparent;
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}  
+
+QTreeWidget::item:focus
+{
+	outline: none;
+	padding: -1;
+}
+
+QWidget:focus
+{
+	outline: none;
+} 
+
+QTreeWidget::branch
+{  
+    	background:transparent;  
+}  
+  
+QTreeWidget::item
+{  
+    	background: transparent;  
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+  
+QTreeWidget::item:hover 
+{  
+    	background:rgba(225, 225, 225, 45);
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;  
+}  
+  
+QTreeWidget::item:selected:active
+{  
+    	background: rgba(50, 50, 50, 45);  
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}  
+  
+QTreeWidget::item:selected:!active 
+{  
+    	background: rgba(25, 25, 25, 45); 
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px; 
+}

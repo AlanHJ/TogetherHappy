@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <schema targetNamespace="http://tempuri.org/happy.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:happy="http://tempuri.org/happy.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <!-- operation request element -->
+  <element name="ChatOneByOne">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatOneByOne::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatOneByOne::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChatOneByOneResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__ChatOneByOne::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ChatShake">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatShake::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatShake::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChatShakeResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__ChatShake::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="GetResource">
+   <complexType>
+    <sequence>
+     <element name="srcuid" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::srcuid -->
+     <element name="srcuip" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::srcuip -->
+     <element name="type" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::type -->
+     <element name="resource" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::resource -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="GetResourceResponse">
+   <complexType>
+    <sequence>
+     <element name="len" type="xsd:int" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__GetResource::len -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="SetResource">
+   <complexType>
+    <sequence>
+     <element name="desuid" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::desuid -->
+     <element name="type" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::type -->
+     <element name="resource" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::resource -->
+     <element name="resname" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::resname -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SetResourceResponse">
+   <complexType>
+    <sequence>
+     <element name="len" type="xsd:int" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__SetResource::len -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ChatGroup">
+   <complexType>
+    <sequence>
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatGroup::gkey -->
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatGroup::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatGroup::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChatGroupResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__ChatGroup::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="SendFileExec">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileExec::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileExec::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SendFileExecResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__SendFileExec::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="SendFileAccept">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileAccept::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileAccept::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SendFileAcceptResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__SendFileAccept::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="UpdateHappy">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateHappy::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateHappy::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="UpdateHappyResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__UpdateHappy::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="InviteGroup">
+   <complexType>
+    <sequence>
+     <element name="builder" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::builder -->
+     <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::title -->
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::gkey -->
+     <element name="members" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::members -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="InviteGroupResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__InviteGroup::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="InviteGroupRespond">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroupRespond::key -->
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroupRespond::gkey -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroupRespond::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="InviteGroupRespondResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__InviteGroupRespond::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="UpdateGroupUser">
+   <complexType>
+    <sequence>
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateGroupUser::gkey -->
+     <element name="newusers" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateGroupUser::newusers -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="UpdateGroupUserResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__UpdateGroupUser::result -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+

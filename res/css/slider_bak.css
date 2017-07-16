@@ -1,0 +1,76 @@
+QSlider
+{
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+	background:transparent;
+}
+QSlider::groove:vertical 
+{  
+    background: rgba(245,245,245,50);
+    width: 6px;  
+    border-radius: 3px; 
+    padding-left:-1px;  
+    padding-right:-1px;  
+    padding-top:-1px;  
+    padding-bottom:-1px;
+} 
+QSlider::sub-page:vertical 
+{  
+    background: rgba(180,180,180,45);
+    border-width:1px;
+    border-style:solid;
+    border-color:transparent;
+    border-radius:3px;
+} 
+QSlider::add-page:vertical 
+{  
+    background:rgba(50,50,50,45);
+    width: 6px;  
+    border-width:1px;
+    border-style:solid;
+    border-color:transparent;
+    border-radius:3px; 
+}
+QSlider::handle:vertical   
+{     
+    border-image:url(:res/ui3/slider_handle.png);
+    margin: -2px -7px -2px -7px; 
+    height: 17px;
+} 
+
+QSlider::groove:horizontal {                                
+     border: 1px solid transparent;                             
+     height: 3px;                                           
+     border-radius: 3px; 
+     background: white;
+	margin: 0px 0; 
+	left: 6px; right: 6px; 
+ }
+
+QSlider::handle:horizontal 
+{                                   
+     image:url(:res/ui3/slider_handle.png);
+     width: 12px; 
+	margin: -6px -6px -6px -6px;        
+} 
+
+QSlider::add-page:horizontal
+{
+    background:rgba(50,50,50,45);
+    border-width:1px;
+    border-style:solid;
+    border-color:transparent;
+    border-radius:3px; 
+
+}
+
+QSlider::sub-page:horizontal
+{                               
+    background: rgba(245,245,245,50)£»
+    border-width:1px;
+    border-style:solid;
+    border-color:transparent;
+    border-radius:3px;
+}

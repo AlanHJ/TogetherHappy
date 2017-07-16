@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Service"
+ targetNamespace="http://tempuri.org/happy.xsd/Service.wsdl"
+ xmlns:tns="http://tempuri.org/happy.xsd/Service.wsdl"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:happy="http://tempuri.org/happy.xsd"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:HTTP="http://schemas.xmlsoap.org/wsdl/http/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+ <schema targetNamespace="http://tempuri.org/happy.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:happy="http://tempuri.org/happy.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <!-- operation request element -->
+  <element name="ChatOneByOne">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatOneByOne::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatOneByOne::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChatOneByOneResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__ChatOneByOne::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ChatShake">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatShake::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatShake::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChatShakeResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__ChatShake::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="GetResource">
+   <complexType>
+    <sequence>
+     <element name="srcuid" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::srcuid -->
+     <element name="srcuip" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::srcuip -->
+     <element name="type" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::type -->
+     <element name="resource" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__GetResource::resource -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="GetResourceResponse">
+   <complexType>
+    <sequence>
+     <element name="len" type="xsd:int" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__GetResource::len -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="SetResource">
+   <complexType>
+    <sequence>
+     <element name="desuid" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::desuid -->
+     <element name="type" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::type -->
+     <element name="resource" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::resource -->
+     <element name="resname" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SetResource::resname -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SetResourceResponse">
+   <complexType>
+    <sequence>
+     <element name="len" type="xsd:int" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__SetResource::len -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ChatGroup">
+   <complexType>
+    <sequence>
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatGroup::gkey -->
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatGroup::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__ChatGroup::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChatGroupResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__ChatGroup::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="SendFileExec">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileExec::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileExec::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SendFileExecResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__SendFileExec::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="SendFileAccept">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileAccept::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__SendFileAccept::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SendFileAcceptResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__SendFileAccept::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="UpdateHappy">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateHappy::key -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateHappy::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="UpdateHappyResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__UpdateHappy::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="InviteGroup">
+   <complexType>
+    <sequence>
+     <element name="builder" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::builder -->
+     <element name="title" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::title -->
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::gkey -->
+     <element name="members" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroup::members -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="InviteGroupResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__InviteGroup::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="InviteGroupRespond">
+   <complexType>
+    <sequence>
+     <element name="key" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroupRespond::key -->
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroupRespond::gkey -->
+     <element name="content" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__InviteGroupRespond::content -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="InviteGroupRespondResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__InviteGroupRespond::result -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="UpdateGroupUser">
+   <complexType>
+    <sequence>
+     <element name="gkey" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateGroupUser::gkey -->
+     <element name="newusers" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- happy__UpdateGroupUser::newusers -->
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="UpdateGroupUserResponse">
+   <complexType>
+    <sequence>
+     <element name="result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/><!-- happy__UpdateGroupUser::result -->
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
+</types>
+
+<message name="ChatOneByOneRequest">
+ <part name="Body" element="happy:ChatOneByOne"/><!-- happy__ChatOneByOne::happy__ChatOneByOne -->
+</message>
+
+<message name="ChatOneByOneResponse">
+ <part name="Body" element="happy:ChatOneByOneResponse"/>
+</message>
+
+<message name="ChatShakeRequest">
+ <part name="Body" element="happy:ChatShake"/><!-- happy__ChatShake::happy__ChatShake -->
+</message>
+
+<message name="ChatShakeResponse">
+ <part name="Body" element="happy:ChatShakeResponse"/>
+</message>
+
+<message name="GetResourceRequest">
+ <part name="Body" element="happy:GetResource"/><!-- happy__GetResource::happy__GetResource -->
+</message>
+
+<message name="GetResourceResponse">
+ <part name="Body" element="happy:GetResourceResponse"/>
+</message>
+
+<message name="SetResourceRequest">
+ <part name="Body" element="happy:SetResource"/><!-- happy__SetResource::happy__SetResource -->
+</message>
+
+<message name="SetResourceResponse">
+ <part name="Body" element="happy:SetResourceResponse"/>
+</message>
+
+<message name="ChatGroupRequest">
+ <part name="Body" element="happy:ChatGroup"/><!-- happy__ChatGroup::happy__ChatGroup -->
+</message>
+
+<message name="ChatGroupResponse">
+ <part name="Body" element="happy:ChatGroupResponse"/>
+</message>
+
+<message name="SendFileExecRequest">
+ <part name="Body" element="happy:SendFileExec"/><!-- happy__SendFileExec::happy__SendFileExec -->
+</message>
+
+<message name="SendFileExecResponse">
+ <part name="Body" element="happy:SendFileExecResponse"/>
+</message>
+
+<message name="SendFileAcceptRequest">
+ <part name="Body" element="happy:SendFileAccept"/><!-- happy__SendFileAccept::happy__SendFileAccept -->
+</message>
+
+<message name="SendFileAcceptResponse">
+ <part name="Body" element="happy:SendFileAcceptResponse"/>
+</message>
+
+<message name="UpdateHappyRequest">
+ <part name="Body" element="happy:UpdateHappy"/><!-- happy__UpdateHappy::happy__UpdateHappy -->
+</message>
+
+<message name="UpdateHappyResponse">
+ <part name="Body" element="happy:UpdateHappyResponse"/>
+</message>
+
+<message name="InviteGroupRequest">
+ <part name="Body" element="happy:InviteGroup"/><!-- happy__InviteGroup::happy__InviteGroup -->
+</message>
+
+<message name="InviteGroupResponse">
+ <part name="Body" element="happy:InviteGroupResponse"/>
+</message>
+
+<message name="InviteGroupRespondRequest">
+ <part name="Body" element="happy:InviteGroupRespond"/><!-- happy__InviteGroupRespond::happy__InviteGroupRespond -->
+</message>
+
+<message name="InviteGroupRespondResponse">
+ <part name="Body" element="happy:InviteGroupRespondResponse"/>
+</message>
+
+<message name="UpdateGroupUserRequest">
+ <part name="Body" element="happy:UpdateGroupUser"/><!-- happy__UpdateGroupUser::happy__UpdateGroupUser -->
+</message>
+
+<message name="UpdateGroupUserResponse">
+ <part name="Body" element="happy:UpdateGroupUserResponse"/>
+</message>
+
+<portType name="ServicePortType">
+ <operation name="ChatOneByOne">
+  <documentation>Service definition of function happy__ChatOneByOne</documentation>
+  <input message="tns:ChatOneByOneRequest"/>
+  <output message="tns:ChatOneByOneResponse"/>
+ </operation>
+ <operation name="ChatShake">
+  <documentation>Service definition of function happy__ChatShake</documentation>
+  <input message="tns:ChatShakeRequest"/>
+  <output message="tns:ChatShakeResponse"/>
+ </operation>
+ <operation name="GetResource">
+  <documentation>Service definition of function happy__GetResource</documentation>
+  <input message="tns:GetResourceRequest"/>
+  <output message="tns:GetResourceResponse"/>
+ </operation>
+ <operation name="SetResource">
+  <documentation>Service definition of function happy__SetResource</documentation>
+  <input message="tns:SetResourceRequest"/>
+  <output message="tns:SetResourceResponse"/>
+ </operation>
+ <operation name="ChatGroup">
+  <documentation>Service definition of function happy__ChatGroup</documentation>
+  <input message="tns:ChatGroupRequest"/>
+  <output message="tns:ChatGroupResponse"/>
+ </operation>
+ <operation name="SendFileExec">
+  <documentation>Service definition of function happy__SendFileExec</documentation>
+  <input message="tns:SendFileExecRequest"/>
+  <output message="tns:SendFileExecResponse"/>
+ </operation>
+ <operation name="SendFileAccept">
+  <documentation>Service definition of function happy__SendFileAccept</documentation>
+  <input message="tns:SendFileAcceptRequest"/>
+  <output message="tns:SendFileAcceptResponse"/>
+ </operation>
+ <operation name="UpdateHappy">
+  <documentation>Service definition of function happy__UpdateHappy</documentation>
+  <input message="tns:UpdateHappyRequest"/>
+  <output message="tns:UpdateHappyResponse"/>
+ </operation>
+ <operation name="InviteGroup">
+  <documentation>Service definition of function happy__InviteGroup</documentation>
+  <input message="tns:InviteGroupRequest"/>
+  <output message="tns:InviteGroupResponse"/>
+ </operation>
+ <operation name="InviteGroupRespond">
+  <documentation>Service definition of function happy__InviteGroupRespond</documentation>
+  <input message="tns:InviteGroupRespondRequest"/>
+  <output message="tns:InviteGroupRespondResponse"/>
+ </operation>
+ <operation name="UpdateGroupUser">
+  <documentation>Service definition of function happy__UpdateGroupUser</documentation>
+  <input message="tns:UpdateGroupUserRequest"/>
+  <output message="tns:UpdateGroupUserResponse"/>
+ </operation>
+</portType>
+
+<binding name="Service" type="tns:ServicePortType">
+ <SOAP:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <operation name="ChatOneByOne">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ChatShake">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="GetResource">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="SetResource">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ChatGroup">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="SendFileExec">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="SendFileAccept">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="UpdateHappy">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="InviteGroup">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="InviteGroupRespond">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+ <operation name="UpdateGroupUser">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="Body" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="Body" use="literal"/>
+  </output>
+ </operation>
+</binding>
+
+<service name="Service">
+ <documentation>gSOAP 2.8.23 generated service definition</documentation>
+ <port name="Service" binding="tns:Service">
+  <SOAP:address location="http://localhost:80"/>
+ </port>
+</service>
+
+</definitions>

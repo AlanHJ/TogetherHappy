@@ -1,0 +1,14 @@
+QToolTip
+{
+	border:0px solid transparent;
+	background-color:rgba(47, 107, 117, 100);
+	border-radius:3px;
+	color:white; 
+}
+
+QLabel
+{
+	font-family:Î¢ÈíÑÅºÚ;
+	font:%1px;
+	color:white;
+}

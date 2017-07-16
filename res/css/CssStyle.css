@@ -1,0 +1,243 @@
+QWidget
+{
+    background:rgb(%1,%2,%3,%4);
+    color:rgb(0,0,0);
+}
+
+.QPushButton
+{
+    border-radius:0px;
+    color:rgb(255,255,255);
+    background-color:rgb(0,0,0,0);
+}
+
+.QPushButton:hover{
+        background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #5CACEE, stop:1 #4F94CD);
+}
+
+.QPushButton:pressed{
+        background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #1B89CA, stop:1 #1077B5);
+}QLabel
+{
+    color:rgb(255, 255, 255);
+    background:rgb(0,0,0,0);
+}
+
+QTreeWidget{
+    background-color: rgba(100%,100%,100%,0%);
+    color: rgb(255, 255, 255);
+    gridline-color: rgb(0, 0, 0);
+}
+/*
+QTreeWidget::item
+{
+    border:1px solid ;
+    color:rgb(255, 255, 255);
+    border-color:rgb(255,255,255,40);
+    border-left-color:transparent;
+    border-top-color:transparent;
+}*/
+
+
+QLineEdit
+{
+    font-family:黑体;
+    font-size:12px;
+    color:rgb(255,255,255);
+    border: none;
+    background:rgb(150,150,150,50);
+}
+QLineEdit:disabled
+{
+    color:rgb(255,255,255);
+}
+
+QWebView
+{
+    border:1px solid rgb(105,240,31);
+    background:rgb(250,250,250);
+}
+
+QTextEdit
+{
+    border:1px solid rgb(105,240,31);
+    background:rgb(250,250,250);
+}
+
+
+{
+    color:rgb(136,136,136);
+}
+
+QMenu {
+    background-color: white;
+    margin: 2px; /* some spacing around the menu */
+}
+
+QMenu::item {
+    padding: 2px 25px 2px 20px;
+    border: 1px solid transparent; /* reserve space for selection border */
+}
+
+QMenu::item:selected {
+    border-color: darkblue;
+    background: rgba(100, 100, 100, 150);
+}
+
+QMenu::icon:checked { /* appearance of a 'checked' icon */
+    background: gray;
+    border: 1px inset gray;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+}
+
+QMenu::separator {
+    height: 2px;
+    background: lightblue;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+QMenu::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QProgressBar {
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+QProgressBar::chunk {
+    background-color: #05B8CC;
+    width: 20px;
+}
+
+
+QStatusBar {
+    color: white;
+    background: white;
+}
+
+
+QStatusBar::item {
+    color: white;
+}
+
+QStatusBar QLabel {
+    color: white;
+}
+
+QHeaderView
+{
+    color: #9497a7;
+    font-family:黑体;
+    font-size:15px;
+    background-color:rgb(255,255,0,0);
+    border:none;
+    border-color:rgb(255,255,255,40);
+    border-left-color:transparent;
+    border-top-color:transparent;
+}
+
+QHeaderView::section 
+{
+    height:25px;
+    border:1px solid rgb(255,255,255,60);
+    border-left-color:transparent;
+    border-top-color:transparent;
+    color: #9497a7;
+    padding-left: 4px;
+    background:rgb(0,0,0,0);
+}
+
+QListView
+{
+    font-family:黑体;
+    font-size:15px;
+    background-color: rgb(255,255,255);
+    selection-color: rgba(100,0,0, 255);
+    selection-background-color: rgb(0,255,0);
+    show-decoration-selected: 1;
+    border:none ;
+}
+QListView::item
+{
+    font-family:黑体;
+    font-size:12px;
+    color:rgb(255,255,255);
+    height:25px;
+    background-color: rgb(0,200,0,0);
+    border:1px solid rgb(255,255,255,60);
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom-color:transparent;
+}
+QListView::item:hover
+{
+    background-color: rgb(105,240,31,60);
+    border:1px solid rgb(105,240,31);
+}
+QTreeWidget::item:hover
+{
+    background-color: rgb(255,255,255,255);
+}
+
+QTabWidget::tab
+{
+    color:rgba(255,255,255,255);
+}
+
+QScrollBar:vertical
+{
+    width:10px;
+    background:rgb(0,0,0,0);
+    
+    padding-left: 1px;
+    padding-right: 1px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(75,75,75,80%);
+    border-radius:4px;
+    min-height:20;
+    background-image:url(:res/css/pic/通用滚动条/中间1.png);
+    background-repeat:norepeat;
+    background-position:center;
+    background-attachment:fixed;
+    
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(129,129,130,80%);
+    border-radius:4px;
+    min-height:20;
+    background-image:url(:res/css/pic/通用滚动条/中间2.png);
+    background-repeat:norepeat;
+    background-position:center;
+    background-attachment:fixed;
+}
+QScrollBar::handle:vertical:pressed
+{
+    width:8px;
+    background:rgba(255,255,255,10%);
+    border-radius:4px;
+    min-height:20;
+    background-image:url(:res/css/pic/通用滚动条/中间3.png);
+    background-repeat:norepeat;
+    background-position:center;
+    background-attachment:fixed;
+}
+QScrollBar::add-line:vertical,QScrollBar::sub-line:vertical
+{
+    height:0px;width:0px;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical
+{
+    background:rgba(155,155,155,0%);
+}

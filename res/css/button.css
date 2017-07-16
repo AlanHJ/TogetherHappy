@@ -1,0 +1,60 @@
+QToolTip
+{
+	border:0px solid transparent;
+	background-color:rgba(47, 107, 117, 100);
+	border-radius:3px;
+	color:white; 
+}
+
+QPushButton
+{
+	border-image:url(:res/ui3/%1);
+	background:rgba(245,245,245,0);
+        border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+
+QPushButton:hover
+{
+	border-image:url(:res/ui3/%2);
+        background:rgba(225,225,225,45);
+        border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+
+QPushButton:pressed
+{
+	border-image:url(:res/ui3/%3);
+        background:rgba(50,50,50,45);
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+
+QPushButton:checked
+{
+        background:rgba(50,50,50,45);
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+
+QPushButton:unchecked
+{
+        background:rgba(245,245,245,50);
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+
+QWidget:focus
+{
+	outline: none;
+} 

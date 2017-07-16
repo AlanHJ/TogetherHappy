@@ -1,0 +1,105 @@
+QTabWidget::pane{
+	border-width:1px;
+	border-style:solid;
+	border-radius:3px;
+	border-color:transparent;
+}
+QTabWidget::tab-bar{
+        alignment:left;
+}
+QTabBar::tab{
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:12px;
+	border-width:1px;
+	border-style:solid;
+	border-radius:3px;
+	border-color:transparent;
+	background:transparent;
+	color:white;
+	min-width:20ex;
+	min-height:8ex;
+	alignment:center;
+}
+QTabBar::tab:hover{
+	border-width:1px;
+	border-style:solid;
+	border-radius:3px;
+	border-color:transparent;
+	background:rgba(180,180,180,45);
+}
+QTabBar::tab:selected{
+	border-width:1px;
+	border-style:solid;
+	border-radius:3px;
+	border-color:transparent;
+	background:rgba(50,50,50,45);
+	color:white;
+}
+
+QTabBar::tab:first {  
+    margin-left: 0; 
+}  
+  
+QTabBar::tab:last {  
+    margin-right: 0;
+}  
+
+QTabBar::tab:only-one {  
+    margin: 0; 
+} 
+
+QTabBar::tear {
+	image: url(:/res/ui3/arrow_left_normal.png);
+}
+
+QTabBar::scroller {
+	width: 18px; 
+	height:10px
+}
+
+QTabBar QToolButton {
+	background:transparent;
+	border-width:1px;
+	border-style:solid;
+	border-radius:3px;
+	border-color:transparent;
+}
+
+QTabBar QToolButton::hover {
+	background-color:rgba(230,230,230,50);
+}
+
+QTabBar QToolButton::pressed {
+	background-color:rgba(50,50,50,50);
+}
+
+QTabBar QToolButton::right-arrow{
+	background:transparent;
+	image: url(:/res/ui3/arrow_right_normal.png);  
+}
+
+QTabBar QToolButton::right-arrow:hover{
+	image: url(:/res/ui3/arrow_right_normal.png);  
+}
+
+QTabBar QToolButton::right-arrow:pressed{
+	image: url(:/res/ui3/arrow_right_press.png);  
+}
+
+QTabBar QToolButton::left-arrow {  
+	background:transparent;
+    image: url(:/res/ui3/arrow_left_normal.png);  
+} 
+
+QTabBar QToolButton::left-arrow:hover {  
+    image: url(:/res/ui3/arrow_left_normal.png);  
+} 
+
+QTabBar QToolButton::left-arrow:pressed {  
+    image: url(:/res/ui3/arrow_left_press.png);  
+} 
+
+QWidget:focus
+{
+	outline: none;
+} 

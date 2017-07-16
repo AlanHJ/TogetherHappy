@@ -1,0 +1,171 @@
+QListView
+{
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:12px;
+	color:white;
+	background-color:rgba(245,245,245,50);
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+
+QWidget:focus
+{
+	outline: none;
+} 
+
+QListView::item
+{
+	background: transparent;  
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}
+
+QListView::item:hover
+{
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:12px;
+	color:white;
+	background:rgba(180,180,180,45);
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px; 
+}
+
+QListView::item:selected:active
+{  
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:12px;
+	color:white;
+    	background: rgba(50, 50, 50, 45);  
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px;
+}  
+  
+QListView::item:selected:!active 
+{  
+	font-family:Î¢ÈíÑÅºÚ;
+	font-size:12px;
+	color:white;
+    	background: rgba(25, 25, 25, 45); 
+	border-width:1px;
+	border-style:solid;
+	border-color:transparent;
+        border-radius:3px; 
+}
+
+QScrollBar:vertical
+{
+	width:8px;
+	background:rgba(0,0,0,0%);
+	margin:0px,0px,0px,0px;
+	padding-top:9px;
+	padding-bottom:9px;
+}
+QScrollBar::handle:vertical
+{
+	width:8px;
+        background:rgba(0,0,0,23%);
+	border-radius:4px;
+        min-height:20px;
+        max-height:40px;
+}
+QScrollBar::handle:vertical:hover
+{
+	width:8px;
+        background:rgba(0,0,0,40%);
+	border-radius:4px;
+        min-height:20px;
+        max-height:40px;
+}
+QScrollBar::add-line:vertical
+{
+	height:9px;width:8px;
+        border-image:url(:/res/ui3/arrow_down_normal.png);
+	subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical
+{
+	height:9px;width:8px;
+        border-image:url(:/res/ui3/arrow_top_normal.png);
+	subcontrol-position:top;
+}
+QScrollBar::add-line:vertical:hover
+{
+	height:9px;width:8px;
+        border-image:url(:/res/ui3/arrow_down_press.png);
+	subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical:hover
+{
+	height:9px;width:8px;
+        border-image:url(:/res/ui3/arrow_top_press.png);
+	subcontrol-position:top;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical
+{
+	background:rgba(0,0,0,10%);
+	border-radius:4px;
+}
+
+QScrollBar:horizontal
+{
+	height:8px;
+	background:rgba(0,0,0,0%);
+	margin:0px,0px,0px,0px;
+	padding-left:9px;
+	padding-right:9px;
+}
+QScrollBar::handle:horizontal
+{
+	height:8px;
+        background:rgba(0,0,0,23%);
+	border-radius:3px;
+        min-width:20px;
+        max-width:40px;
+}
+QScrollBar::handle:horizontal:hover
+{
+	height:8px;
+        background:rgba(0,0,0,40%);
+	border-radius:3px;
+        min-width:20px;
+        max-width:40px;
+}
+QScrollBar::add-line:horizontal
+{
+	height:8px;width:9px;
+        border-image:url(:/res/ui3/arrow_right_normal.png);
+	subcontrol-position:right;
+}
+
+QScrollBar::sub-line:horizontal
+{
+	height:8px;width:9px;
+        border-image:url(:/res/ui3/arrow_left_normal.png);
+	subcontrol-position:left;
+}
+
+QScrollBar::add-line:horizontal:hover
+{
+	height:8px;width:9px;
+        border-image:url(:/res/ui3/arrow_right_press.png);
+	subcontrol-position:right;
+}
+QScrollBar::sub-line:horizontal:hover
+{
+	height:8px;width:9px;
+        border-image:url(:/res/ui3/arrow_left_press.png);
+	subcontrol-position:left;
+}
+QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal
+{
+	background:rgba(0,0,0,10%);
+	border-radius:3px;
+}
