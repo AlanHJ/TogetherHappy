@@ -1,4 +1,4 @@
 # TogetherHappy
-My Chat Tool
-like feiqu, but not feiqu
+My Chat Tool.
+like feiq, but not feiq.
 gsoap, tcp, udp, xml, html
